@@ -1,0 +1,372 @@
+* {
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+/*Estilos de etiquetas*/
+
+body {
+    font-family: 'Roboto Slab', sans-serif;
+    margin: 0;
+    text-align: justify;
+    width: 100%;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+h1 {
+    font-family: 'Eczar', sans-serif;
+    color: #1B5E4F;
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+    margin-top: .5rem;
+}
+
+h2 {
+    color: #601004;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+input:focus,
+textarea:focus {
+    border: 2px solid black;
+    outline: none;
+}
+
+
+/******** HEADER, FOOTER Y MENÚ LATERAL COMÚN EN TODAS LAS PÁGINAS *********/
+
+div#menu-lateral {
+    position: absolute;
+    background-color: #601004;
+    color: white;
+    width: 100%;
+    z-index: 4;
+    height: 100%;
+    display: none;
+}
+
+div#menu-lateral>ul {
+    list-style: none;
+}
+
+div#menu-lateral>ul>li {
+    margin: 3rem 0;
+}
+
+div#menu-lateral>ul>li:nth-child(1) {
+    margin: 0;
+    margin-bottom: 5rem;
+    margin-top: 1rem;
+    margin-right: .75rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+div#menu-lateral>ul>li>a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+div#menu-lateral>ul>li>a>img {
+    width: 3rem;
+    height: auto;
+    margin-right: .5rem;
+}
+
+header {
+    width: 100%;
+    z-index: 3;
+}
+
+header>div#cabecera {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 1rem 0;
+}
+
+header>div#cabecera>div#hamburger {
+    padding-left: 1rem;
+}
+
+header>div#cabecera>div#hamburger>span {
+    font-size: 2rem;
+}
+
+header>div#cabecera>a>picture>img {
+    width: 12rem;
+    height: auto;
+}
+
+header>div#cabecera>div#icon-mail {
+    padding-right: 1rem;
+}
+
+header>div#cabecera>div#icon-mail>a>span {
+    font-size: 1.5rem;
+    color: white;
+}
+
+header>nav#menu-principal {
+    display: none;
+}
+
+header>nav#menu-principal>ul {
+    list-style: none;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #601004;
+    color: white;
+    padding: 1.5rem 0;
+    font-size: .75rem;
+    position: absolute;
+    bottom: 0;
+}
+
+footer>div#menu-legal>ul {
+    list-style: none;
+    margin-left: -1.5rem;
+}
+
+a#go-up {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+a#go-up>i {
+    font-size: 3rem;
+    color: #601004;
+    background-color: white;
+    border-radius: 2rem;
+}
+
+a#go-up>i:hover {
+    cursor: pointer;
+}
+
+
+/************ Contenido ************/
+
+div#contenido {
+    width: 100%;
+    margin-bottom: 12rem;
+}
+
+form {
+    margin: 1rem auto;
+    width: 90%;
+    font-size: 1.25rem;
+}
+
+form>div {
+    margin: 0 auto;
+}
+
+form>select {
+    background-color: #601004;
+    color: white;
+    width: 100%;
+    font-size: 1rem;
+    padding: .5rem;
+}
+
+form button {
+    background-color: #1B5E4F;
+    color: white;
+    border: none;
+    padding: .5rem;
+}
+
+form>div#button-horas>button {
+    width: 23%;
+}
+
+form>div#button-tiempo>button {
+    width: 30%;
+}
+
+form>input {
+    width: 90%;
+    font-size: 1rem;
+}
+
+form>input[type=text], input[type=email], input[type=tel] {
+    background-color: #601004;
+    color: white;
+    padding: .5rem;
+}
+
+form>input[type=text]::placeholder, input[type=email]::placeholder, input[type=tel]::placeholder {
+    color: white;
+}
+
+form>button {
+    font-size: 1.5rem;
+    border-radius: 46px;
+    padding: 1rem;
+}
+
+form>button#button-siguiente {
+    width: 100%;
+}
+
+form>button#button-atras,
+button#button-envio {
+    width: 48%;
+}
+
+p {
+    width: 85%;
+    margin: 2rem auto;
+    line-height: 2rem;
+    font-size: 1.25rem;
+}
+
+div#datos,
+div#confirmacion {
+    display: none;
+}
+
+p.negrita {
+    font-weight: bold;
+    text-align: center;
+}
+
+label>picture>img {
+    width: 1.5rem;
+    height: auto;
+}
+
+span.error{
+    color: #601004;
+    display: none;
+}
+
+@media all and (min-width: 600px) {
+    header>nav#menu-principal {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        margin-top: .5rem;
+    }
+    header>nav#menu-principal>ul>li:last-child {
+        display: none;
+    }
+    header>nav#menu-principal>ul>li:nth-child(5) {
+        background-color: #601004;
+    }
+    header>nav#menu-principal {
+        margin-top: -.1rem;
+    }
+    header>nav#menu-principal>ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header>nav#menu-principal>ul>li {
+        background-color: black;
+        padding: .5rem 2rem;
+        width: 19%;
+        text-align: center;
+        font-size: .7rem;
+    }
+    header>nav#menu-principal>ul>li>a {
+        color: white;
+        text-decoration: none;
+    }
+    header>div#cabecera>div#hamburger>span {
+        display: none;
+    }
+    header {
+        padding-bottom: 0;
+    }
+    div#contenido {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-wrap: wrap;
+    }
+    div#contenido>h1 {
+        width: 100%;
+        margin: 1rem;
+    }
+    div#reserva>form>button {
+        display: none;
+    }
+    div#reserva>h1 {
+        margin: 2rem;
+    }
+    div#reserva {
+        width: 45%;
+    }
+    div#datos>h1,
+    form>button#button-atras {
+        display: none;
+    }
+    div#datos {
+        display: block;
+        width: 45%;
+    }
+    footer>div#menu-legal>ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 70%;
+        margin: 2.5rem auto;
+    }
+    #calendar-wrapper2 {
+        width: 45%;
+        margin: .5rem;
+    }
+}
+
+@media all and (min-width: 900px) {
+    header>div#cabecera>div#icon-mail>a {
+        display: none;
+    }
+    header>nav#menu-principal>ul>li:last-child {
+        display: flex;
+        justify-content: center;
+    }
+    header>nav#menu-principal>ul>li:last-child>a {
+        display: flex;
+        align-items: center;
+    }
+    header>nav#menu-principal>ul>li:last-child>a>span {
+        margin-left: 1rem;
+    }
+    header>nav#menu-principal>ul>li:last-child>a>span:first-child {
+        font-size: 1.2rem;
+    }
+    header>nav#menu-principal>ul>li {
+        width: 16%;
+        font-size: .9rem;
+    }
+}
